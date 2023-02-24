@@ -11,8 +11,8 @@ function bar(length) {
         for (let col = 0; col < length; col++) {
             const rightDiagonal = col === length - row - 1;
             const leftDiagonal = row === col;
-            const upperCenter = col > row && col < rightDiagonal;
-            const lowerCenter = col < row && col > rightDiagonal;
+            const upperCenter = col > row && col < length - row - 1;
+            const lowerCenter = col < row && col > length - row - 1;
             let value = 0;
             if (leftDiagonal || rightDiagonal) {
                 value = 2;
@@ -43,5 +43,3 @@ console.log(bar(4))
 [2,1,1,2],
 ]
 */
-
-
